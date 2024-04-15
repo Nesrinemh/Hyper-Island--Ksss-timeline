@@ -1,10 +1,10 @@
 import './App.css';
+import Main from './container/Main';
 
 function App() {
   return (
     <>
-      {' '}
-      <h1 className=' bg-red-600'> hello</h1>
+      <Main />
     </>
   );
 }
