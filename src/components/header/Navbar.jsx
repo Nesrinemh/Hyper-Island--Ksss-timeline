@@ -26,6 +26,10 @@ function Navbar() {
 
       <div>
         <label class='flex items-center relative w-max cursor-pointer select-none'>
+<<<<<<< HEAD
+=======
+          <span class='text-lg font-bold mr-3'>Toggle</span>
+>>>>>>> db500b0 (Add header and navbar components)
           <input
             type='checkbox'
             class='appearance-none transition-colors cursor-pointer w-14 h-7 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-500 bg-red-500'

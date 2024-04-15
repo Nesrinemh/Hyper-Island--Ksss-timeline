@@ -6,9 +6,9 @@ import Main from './container/Main';
 function App() {
   return (
     <>
+      <Main />
       <Navbar />
       <HeaderSection />
-      <Main />
     </>
   );
 }
