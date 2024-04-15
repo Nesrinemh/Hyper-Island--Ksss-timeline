@@ -1,10 +1,12 @@
 import './App.css';
+import HeaderSection from './components/header/HeaderSection';
+import Navbar from './components/header/Navbar';
 
 function App() {
   return (
     <>
-      {' '}
-      <h1 className=' bg-red-600'> hello</h1>
+      <Navbar />
+      <HeaderSection />
     </>
   );
 }
