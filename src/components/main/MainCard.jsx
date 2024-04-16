@@ -14,7 +14,6 @@ function MainCard() {
 
   return (
     <>
-      <div style={{ height: '210px' }}></div>
       <article>
         {archive.map((item, index) => {
           return (
