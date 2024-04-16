@@ -8,7 +8,7 @@ import ToggleLanguages from './ToggleLanguages';
 
 function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-white shadow">
+    <Disclosure as="nav" className="bg-white shadow ">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -22,7 +22,7 @@ function Navbar() {
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
+                    className="hidden lg:block h-10 w-auto"
                     src={logo}
                     alt="Workflow"
                   />
@@ -51,32 +51,44 @@ function Navbar() {
                     </svg>
                   </a>
                 </div>
+                {/* Large screen navbar */}
                 <div className="hidden lg:ml-6 lg:flex lg:space-x-8 ">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <a
                     href="#"
-                    className="border-[indigo-500] text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-[#017AAF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    LOGIN
+                    About us
                   </a>
                   <a
                     href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-[#017AAF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    CONTACT
+                    Log in / Signup
                   </a>
                   <a
                     href="#"
-                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-[#017AAF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                   >
-                    ABOUT US
+                    Be a member
+                  </a>
+                  <a
+                    href="#"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-[#017AAF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    Year book
+                  </a>
+                  <a
+                    href="#"
+                    className="border-transparent text-gray-500 hover:border-gray-300 hover:text-[#017AAF] inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                  >
+                    Contact us
                   </a>
                 </div>
                 <div className="inline-flex items-center ml-4">
                   <ToggleLanguages />
                 </div>
               </div>
-
               <div className="flex-1 md:flex items-center justify-center hidden px-2 lg:ml-6 lg:justify-end">
                 <div className="max-w-lg w-full lg:max-w-xs">
                   <label htmlFor="search" className="sr-only">
@@ -120,7 +132,8 @@ function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="bg-indigo-50  border-[#017AAF] text-[#017AAF] block pl-3 pr-4 py-2 border-l-4 text-xs font-medium hover:font-bold"
+                className="border-transparent text-[#017AAF] hover:bg-gray-50 hover:border-gray-300 hover:font-bold block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                s
               >
                 About us
               </Disclosure.Button>
