@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.YearNavigationContainer {
+  max-width: 100%;
+  overflow-x: auto;
+  background-color: #ffffff;
+}
+
+.YearNavigation {
+  height: 5vh;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+button {
+  width: 80px;
+  padding: 5px 10px;
+  margin: 0 15px;
+  border: 2px solid #999999;
+  cursor: pointer;
+  border-radius: 20px;
+  color: #999999;
+  background-color: white;
+  font-weight: bold;
+}
+
+button:first-child {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+button:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+button:hover {
+  background-color: #348db3;
+  color: white;
+}
