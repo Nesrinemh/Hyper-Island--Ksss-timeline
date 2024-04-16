@@ -14,8 +14,8 @@ export default function ToggleLanguages() {
       checked={enabled}
       onChange={setEnabled}
       className={classNames(
-        enabled ? 'bg-indigo-600' : 'bg-gray-200',
-        'flex items-center  flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+        enabled ? 'bg-[#017AAF]' : 'bg-gray-200',
+        'flex items-center  flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#017AAF]'
       )}
     >
       <span className="sr-only">Use setting</span>
@@ -34,7 +34,7 @@ export default function ToggleLanguages() {
           )}
           aria-hidden="true"
         >
-          SV
+          <p className="font-bold text-xs text-[#017AAF] ">SE</p>
         </span>
         <span
           className={classNames(
@@ -45,7 +45,7 @@ export default function ToggleLanguages() {
           )}
           aria-hidden="true"
         >
-          EN
+          <p className="font-bold text-xs text-[#017AAF] ">EN</p>
         </span>
       </span>
     </Switch>

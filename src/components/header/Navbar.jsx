@@ -13,8 +13,9 @@ function Navbar() {
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div className="flex justify-between h-16">
-              <div className="flex px-2 lg:px-0">
-                <div className="flex-shrink-0 flex items-center">
+              <div className="flex px-2 lg:px-0 ">
+                <div className="flex-shrink-0 flex items-center ">
+                  {/* Logo */}
                   <img
                     className="block lg:hidden h-8 w-auto"
                     src={logo}
@@ -25,8 +26,9 @@ function Navbar() {
                     src={logo}
                     alt="Workflow"
                   />
+                  {/* Title */}
                   <h2 className=" ml-4 text-[#017AAF] font-bold">History</h2>
-
+                  {/* Ksss Website link */}
                   <a
                     href="https://www.ksss.se/"
                     target="_blank"
@@ -49,8 +51,7 @@ function Navbar() {
                     </svg>
                   </a>
                 </div>
-
-                <div className="hidden lg:ml-6 lg:flex lg:space-x-8">
+                <div className="hidden lg:ml-6 lg:flex lg:space-x-8 ">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
                   <a
                     href="#"
@@ -70,9 +71,9 @@ function Navbar() {
                   >
                     ABOUT US
                   </a>
-                  <div>
-                    <ToggleLanguages />
-                  </div>
+                </div>
+                <div className="inline-flex items-center ml-4">
+                  <ToggleLanguages />
                 </div>
               </div>
 
@@ -101,7 +102,7 @@ function Navbar() {
 
               <div className="flex items-center lg:hidden">
                 {/* Mobile menu button */}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#017AAF] ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -119,25 +120,38 @@ function Navbar() {
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="bg-indigo-50 border-indigo-500 text-indigo-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                className="bg-indigo-50  border-[#017AAF] text-[#017AAF] block pl-3 pr-4 py-2 border-l-4 text-xs font-medium hover:font-bold"
               >
-                LOGIN
+                About us
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                className="border-transparent text-[#017AAF] hover:bg-gray-50 hover:border-gray-300 hover:font-bold block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
               >
-                CONTACT
+                Log in / Signup
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium"
+                className="border-transparent text-[#017AAF] hover:bg-gray-50 hover:border-gray-300 hover:font-bold block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
               >
-                ABOUT
+                Be a member
               </Disclosure.Button>
-              <ToggleLanguages />
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="border-transparent text-[#017AAF] hover:bg-gray-50 hover:border-gray-300 hover:font-bold block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+              >
+                Year book
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#"
+                className="border-transparent text-[#017AAF] hover:bg-gray-50 hover:border-gray-300 hover:font-bold block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+              >
+                Contact us
+              </Disclosure.Button>
               <div className="max-w-lg w-full lg:max-w-xs block md:hidden">
                 <label htmlFor="search" className="sr-only">
                   Search
