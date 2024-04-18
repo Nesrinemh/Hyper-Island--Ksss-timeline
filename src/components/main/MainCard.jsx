@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { archive } from '../../../data.js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import YearNavigation from './YearNavigation.jsx';
+
 
 function MainCard() {
   useEffect(() => {
@@ -14,6 +16,7 @@ function MainCard() {
 
   return (
     <>
+      <YearNavigation />
       <article>
         {archive.map((item, index) => {
           return (
