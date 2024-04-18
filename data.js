@@ -35,3 +35,26 @@ export const archive = [
     readMore: 'Read more',
   },
 ];
+
+export const Pdf = [
+  {
+    year: '2020',
+    image: './src/assets/yacht1.jpg',
+    url: 'https://www.google.com',
+  },
+  {
+    year: '2019',
+    image: './src/assets/yacht2.jpg',
+    url: 'https://www.google.com',
+  },
+  {
+    year: '2018',
+    image: './src/assets/yacht3.jpg',
+    url: 'https://www.google.com',
+  },
+  {
+    year: '2017',
+    image: './src/assets/yacht4.jpg',
+    url: 'https://www.google.com',
+  },
+];
