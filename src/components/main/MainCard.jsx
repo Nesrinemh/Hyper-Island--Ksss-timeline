@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import YearNavigation from './YearNavigation.jsx';
 
+
 function MainCard() {
   useEffect(() => {
     AOS.init({
