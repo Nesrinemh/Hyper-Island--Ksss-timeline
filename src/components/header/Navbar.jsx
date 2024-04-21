@@ -103,7 +103,7 @@ function Navbar() {
               </div>
             </div>
 
-            <Disclosure.Panel className="lg:hidden w-40 absolute right-0   bg-white   z-50">
+            <Disclosure.Panel className="lg:hidden w-40 absolute right-0 bg-white z-50 border rounded-lg">
               <div className="pt-2 pb-3 space-y-1">
                 <Disclosure.Button
                   as="a"

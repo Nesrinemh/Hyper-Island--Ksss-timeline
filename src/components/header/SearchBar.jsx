@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unknown-property */
 function SearchBar() {
   return (
-    <div className="flex md:justify-center justify-end items-center border-[#F3F3F3] border-b-2 h-[3.3em]">
-      <div className="max-w-lg w-[18.9em] md:w-[128.9em]   overflow-hidden">
+    <div className="flex md:justify-center justify-end items-center border-[#F3F3F3] border-b-2 h-[3.3em] outline-none">
+      {/* search bar */}
+      <div className="max-w-lg w-[18.9em] md:w-[128.9em] overflow-hidden focus:outline-none  ">
         <label htmlFor="search" className="sr-only">
           Search
         </label>
-        <div className="relative">
+        <div className="relative ">
           <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -26,12 +27,13 @@ function SearchBar() {
           <input
             id="search"
             name="search"
-            className="block w-full  pl-10 pr-3 py-2 border-none  rounded-full leading-5 bg-[#F3F3F3] placeholder-[#8F8F8F] focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className=" focus:outline-none block w-full pl-10 pr-3 py-2 border-none rounded-full leading-5 bg-[#F3F3F3] placeholder-[#8F8F8F] sm:text-sm"
             placeholder="Search for events"
             type="search"
           />
         </div>
       </div>
+      {/* filter */}
       <div className="ml-10 mr-3">
         <svg
           width="24"
