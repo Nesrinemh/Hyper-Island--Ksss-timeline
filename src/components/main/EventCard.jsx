@@ -21,14 +21,6 @@ function EventCard() {
         </figure>
 
         <div className="w-full overflow-x-auto flex flex-row py-6">
-          {/* <div className="flex justify-center items-center">
-            <SlArrowLeft
-              className="absolute left-5 text-white text-3xl"
-              style={{
-                background: 'linear-gradient(to right, black, transparent)',
-              }}
-            />
-          </div> */}
           <div className="flex justify-center items-center">
             <SlArrowLeft
               className="absolute left-5 text-white text-3xl"
