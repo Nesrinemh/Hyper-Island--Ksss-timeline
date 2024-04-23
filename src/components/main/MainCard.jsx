@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { archive } from '../../../data.js';
+import YearNavigation from './YearNavigation.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import YearNavigation from './YearNavigation.jsx';
 
 
 function MainCard() {
