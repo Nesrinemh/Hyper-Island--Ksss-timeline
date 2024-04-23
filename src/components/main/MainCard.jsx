@@ -48,7 +48,7 @@ function MainCard() {
                   2024
                 </div>
                 <section className="flex flex-col w-full justify-start items-start px-[3rem]">
-                  <h1 className="font-bold sm:text-xl md:text-2xl lg:text-3xl ">
+                  <h1 className="font-bold sm:text-xl md:text-2xl lg:text-3xl">
                     {item.title}
                   </h1>
                   <p className="sm:text-sm sm:py-5 md:py-10 md:text-lg">

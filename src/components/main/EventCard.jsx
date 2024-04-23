@@ -5,23 +5,23 @@ import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 function EventCard() {
   return (
     <>
-      <article>
-        <section>
-          <h1 className="font-md font-bold px-12 pt-8 pb-2">
+      <article className="flex flex-col justify-center items-center">
+        <section className="text-sm px-5 py-4">
+          <h1 className="font-bold sm:text-xl md:text-2xl lg:text-3xl px-12 pt-8 pb-2">
             Fredrik Lööf wins the bronze medal at the Sydney Olympics
           </h1>
-          <p className="text-sm px-12 pb-6">
+          <p className="px-12 pb-6 sm:text-sm sm:py-1 md:pb-10 md:text-lg">
             In the summer of 2000, Fredrik Lööf secured a bronze medal for
             Sweden in the Finn dinghy class at the Sydney Olympics.{' '}
           </p>
         </section>
 
         <figure>
-          <img src={Fredrik} alt="Fredrik Lööf" />
+          <img src={Fredrik} alt="Fredrik Lööf" className="shadow-md" />
         </figure>
 
-        <div className="w-full overflow-x-auto flex flex-row py-6">
-          <div className="flex justify-center items-center">
+        <div className="w-full overflow-x-auto flex flex-row py-6  max-w-[50rem] justify-between">
+          <div className="flex justify-center items-center sticky">
             <SlArrowLeft
               className="absolute left-5 text-white text-3xl"
               style={{
@@ -53,19 +53,19 @@ function EventCard() {
               src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
             />
           </div>
-          <div class="snap-center pl-4">
+          <div className="snap-center pl-4">
             <img
               className="object-cover shrink-0 max-w-100 max-h-70 min-w-40 min-h-30 rounded-lg shadow-md"
               src="https://images.unsplash.com/photo-1575424909138-46b05e5919ec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
             />
           </div>
-          <div class="snap-center px-4">
+          <div className="snap-center px-4">
             <img
               className="object-cover shrink-0 max-w-100 max-h-70 min-w-40 min-h-30 rounded-lg shadow-md"
               src="https://images.unsplash.com/photo-1559333086-b0a56225a93c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=160&q=80"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center sticky">
             <SlArrowRight
               className="absolute right-5 text-white text-3xl"
               style={{
@@ -74,13 +74,13 @@ function EventCard() {
             />
           </div>
         </div>
-        <div className="text-sm px-12 py-4">
-          <p className="pb-4">
+        <div className="text-sm px-5 py-4 max-w-[90%]">
+          <p className="px-12 pb-6 sm:text-sm sm:py-1 md:pb-10 md:text-lg">
             Lööf's achievement marked a significant moment in Swedish sailing
             history, showcasing his skill and determination on the international
             stage.
           </p>
-          <p className="pb-4">
+          <p className="px-12 pb-6 sm:text-sm sm:py-1 md:pb-10 md:text-lg">
             With his impressive performance, Lööf demonstrated the prowess of
             Swedish sailors and added to the country's Olympic medal tally. His
             accomplishment in the Finnjolle event not only brought pride to

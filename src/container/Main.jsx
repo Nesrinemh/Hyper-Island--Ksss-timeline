@@ -1,10 +1,12 @@
 import React from 'react';
-import MainCard from '../components/main/MainCard';
+// import MainCard from '../components/main/MainCard';
+import EventCard from '../components/main/EventCard';
 
 function Main() {
   return (
     <>
-      <MainCard />
+      {/* <MainCard /> */}
+      <EventCard />
     </>
   );
 }
