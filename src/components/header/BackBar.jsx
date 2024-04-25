@@ -1,5 +1,6 @@
-import React from '@babel/core';
+import React from 'react';
 import { SlArrowLeft } from 'react-icons/sl';
+
 function BackBar() {
   return (
     <>
