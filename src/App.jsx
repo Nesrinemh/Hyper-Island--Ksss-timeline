@@ -6,7 +6,6 @@ import EventCard from './components/main/EventCard';
 import Footer from './container/Footer';
 import Main from './container/Main';
 import YearBookPage from './pages/YearBookPage';
-import Footer from './container/Footer';
 
 function App() {
   return (
