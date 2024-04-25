@@ -1,19 +1,34 @@
 import './App.css';
-import BackBar from './components/header/BackBar';
-import HeaderSection from './components/header/HeaderSection';
-import Navbar from './components/header/Navbar';
-import EventCard from './components/main/EventCard';
+import Header from './container/Header';
 import Footer from './container/Footer';
-import Main from './container/Main';
-import YearBookPage from './pages/YearBookPage';
+import MainPage from './pages/MainPage';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
+
 export default App;
+
+{
+  /* // <div className="App">
+    //   <Header />
+    //   <MainContent />
+    //   <Footer />
+    // </div> */
+}
