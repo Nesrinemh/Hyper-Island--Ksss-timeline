@@ -64,7 +64,7 @@ function MainCard({ item }) {
             <img
               src={item.images[0].fields.file.url}
               alt="main image"
-              className="w-full h-autoobject-cover shadow-md rounded-xl lg:min-w-[20rem] lg:min-h-[10rem]"
+              className="w-full h-autoobject-cover shadow-md  lg:min-w-[20rem] lg:min-h-[10rem]"
             />
           </div>
         </article>
