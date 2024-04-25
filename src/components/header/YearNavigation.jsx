@@ -1,5 +1,4 @@
-import React from 'react';
-import useContentful from '../../helpers/useContentful';
+import useContentful from '../../helpers/useContenful';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 

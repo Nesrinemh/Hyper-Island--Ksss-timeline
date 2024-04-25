@@ -28,8 +28,6 @@ const YearBookCard = () => {
             className="h-40"
             style={{
               background: 'rgb(255,255,255)',
-              background:
-                'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 33%)',
             }}
           >
             <a

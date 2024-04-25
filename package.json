@@ -13,6 +13,7 @@
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^1.0.6",
     "aos": "^2.3.4",
+    "contentful": "^10.8.10",
     "i18next": "^23.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
