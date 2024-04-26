@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/event" element={<EventPage />} />
+          <Route path="/event/:id" element={<EventPage />} />
           <Route path="/yearbook" element={<YearBookPage />} />
         </Routes>
         <Footer />

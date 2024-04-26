@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 function MainCard({ item }) {
   const [language, setLanguage] = useState(
@@ -21,7 +22,6 @@ function MainCard({ item }) {
   }, [language]);
 
   const readMoreText = language === 'swedish' ? 'Läs mer' : 'Read more';
-
   return (
     <>
       <div style={{ backgroundColor: '#F7F7F7' }}>
@@ -58,15 +58,17 @@ function MainCard({ item }) {
                   ? item.summarySwedish
                   : item.summaryEnglish}
               </p>
-              <button
-                href="https://example.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-sm border-none rounded-xl px-8 py-2  mb-[1rem] transform sm: active:scale-95 transition-transform duration-200"
-                style={{ backgroundColor: '#348DB3', color: '#FAFAFA' }}
-              >
-                {readMoreText}
-              </button>
+              <Link to={`event/${item.eventId}`}>
+                <button
+                  href="https://example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-sm border-none rounded-xl px-8 py-2  mb-[1rem] transform sm: active:scale-95 transition-transform duration-200"
+                  style={{ backgroundColor: '#348DB3', color: '#FAFAFA' }}
+                >
+                  {readMoreText}
+                </button>
+              </Link>
             </section>
           </div>
 
