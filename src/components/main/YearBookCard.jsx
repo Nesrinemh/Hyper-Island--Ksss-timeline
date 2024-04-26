@@ -1,4 +1,3 @@
-import { Pdf } from '../../../data.js';
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -14,7 +13,7 @@ const YearBookCard = () => {
 
   return (
     <div>
-      {Pdf.map((item, index) => (
+      {/* {Pdf.map((item, index) => (
         <article
           key={index}
           className="  h-40 my-10 mx-8 bg-cover border-none rounded-xl "
@@ -28,6 +27,8 @@ const YearBookCard = () => {
             className="h-40"
             style={{
               background: 'rgb(255,255,255)',
+              background:
+                'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 33%)',
             }}
           >
             <a
@@ -42,7 +43,8 @@ const YearBookCard = () => {
             </a>
           </div>
         </article>
-      ))}
+      ))} */}{' '}
+      PRIOR #3 under developing
     </div>
   );
 };

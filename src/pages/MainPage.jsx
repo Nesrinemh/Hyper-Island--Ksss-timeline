@@ -1,7 +1,13 @@
+import Header from '../container/Header';
 import MainContent from '../container/MainContent';
 
 function MainPage() {
-  return <MainContent />;
+  return (
+    <div>
+      <Header />
+      <MainContent />
+    </div>
+  );
 }
 
 export default MainPage;

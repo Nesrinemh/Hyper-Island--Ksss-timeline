@@ -1,15 +1,16 @@
-import React from 'react';
-import Header from '../container/Header';
+import Navbar from '../components/header/Navbar';
+import SearchBar from '../components/header/SearchBar';
+import YearNavigation from '../components/header/YearNavigation';
 import YearBookCard from '../components/main/YearBookCard';
-import Footer from '../container/Footer';
 
 const YearBookPage = () => {
   return (
-    <>
-      <Header />
+    <div>
+      <Navbar />
+      <SearchBar />
+      <YearNavigation />
       <YearBookCard />
-      <Footer />
-    </>
+    </div>
   );
 };
 

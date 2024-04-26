@@ -1,5 +1,4 @@
-import React from "react";
-import { PiFacebookLogo, PiEnvelope, PiPhone } from "react-icons/pi";
+import { PiFacebookLogo, PiEnvelope, PiPhone } from 'react-icons/pi';
 
 function Footer() {
   //-> Function to get current year for copiright:

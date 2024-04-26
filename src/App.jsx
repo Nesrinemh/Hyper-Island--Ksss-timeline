@@ -1,7 +1,4 @@
 import './App.css';
-import Header from './container/Header';
-import Footer from './container/Footer';
-import MainPage from './pages/MainPage';
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,13 +6,19 @@ import {
   BrowserRouter,
 } from 'react-router-dom';
 
+import MainPage from './pages/MainPage';
+import EventPage from './pages/EventPage';
+import YearBookPage from './pages/YearBookPage';
+import Footer from './container/Footer';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
+          <Route path="/event" element={<EventPage />} />
+          <Route path="/yearbook" element={<YearBookPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -24,11 +27,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* // <div className="App">
-    //   <Header />
-    //   <MainContent />
-    //   <Footer />
-    // </div> */
-}

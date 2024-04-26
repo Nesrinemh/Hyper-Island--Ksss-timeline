@@ -1,5 +1,3 @@
-import React from 'react';
-import Fredrik from '../../assets/fredrik.jpg';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
 function EventCard() {
@@ -17,7 +15,7 @@ function EventCard() {
         </section>
 
         <figure>
-          <img src={Fredrik} alt="Fredrik Lööf" className="shadow-md" />
+          <img src={''} alt="Fredrik Lööf" className="shadow-md" />
         </figure>
 
         <div className="w-full overflow-x-auto flex flex-row py-6  max-w-[50rem] justify-between">
