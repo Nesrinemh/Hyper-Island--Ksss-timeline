@@ -11,6 +11,10 @@ function MainCard({ item }) {
     });
   }, []);
 
+  const language = localStorage.getItem('language') || 'swedish';
+
+  const url = item.pdfs && item.pdfs[0].fields.file.url;
+
   return (
     <>
       <div style={{ backgroundColor: '#F7F7F7' }}>
@@ -43,10 +47,12 @@ function MainCard({ item }) {
             </div>
             <section className="flex flex-col w-full justify-start items-start px-[3rem]">
               <h1 className="font-bold sm:text-xl md:text-2xl lg:text-3xl">
-                {item.titleSwedish}
+                {language === 'swedish' ? item.titleSwedish : item.titleEnglish}
               </h1>
               <p className="sm:text-sm py-5 md:text-lg">
-                {item.summarySwedish}
+                {language === 'swedish'
+                  ? item.summarySwedish
+                  : item.summaryEnglish}
               </p>
               <button
                 href="https://example.com"
@@ -57,6 +63,7 @@ function MainCard({ item }) {
               >
                 Read more
               </button>
+              <a href={url}>Download PDF</a>
             </section>
           </div>
 
@@ -64,7 +71,7 @@ function MainCard({ item }) {
             <img
               src={item.images[0].fields.file.url}
               alt="main image"
-              className="w-full h-autoobject-cover shadow-md  lg:min-w-[20rem] lg:min-h-[10rem]"
+              className="w-full h-autoobject-cover shadow-md rounded-xl lg:min-w-[20rem] lg:min-h-[10rem]"
             />
           </div>
         </article>
