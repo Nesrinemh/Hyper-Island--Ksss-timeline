@@ -18,13 +18,13 @@ const useContentful = () => {
 
       const sanitizedEntries = entries.items.map((item) => {
         const eventImages = item.fields.images;
-
+        console.log(item);
         return {
           ...item.fields,
           eventImages,
         };
       });
-
+      console.log(entries);
       return sanitizedEntries;
     } catch (error) {
       console.error(`Error fetching data: ${error}`);
