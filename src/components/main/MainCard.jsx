@@ -13,16 +13,11 @@ function MainCard({ item }) {
 
   const language = localStorage.getItem('language') || 'swedish';
 
-  const url = item.pdfs && item.pdfs[0].fields.file.url;
-
   return (
     <>
       <div style={{ backgroundColor: '#F7F7F7' }}>
         <article
-          className="flex flex-col py-[3rem] sm:flex-col sm:w-full
-        md:flex-row
-        md:w-full
-        md:justify-evenly md:pr-[3rem] lg:w-full items-center"
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-[3rem] "
           {...(window.innerWidth <= 640 &&
             item > 1 && {
               'data-aos': 'fade-up',
@@ -38,9 +33,9 @@ function MainCard({ item }) {
               'data-aos-duration': '400',
             })}
         >
-          <div className="flex flex-row justify-start items-start md:ml-0 lg:ml-0">
+          <div className="flex flex-row justify-start items-start ml-0">
             <div
-              className="sticky left-0 font-semibold sm:w-[5rem] sm:h-[1.5rem] text-black px-3 rounded-r-md"
+              className="sticky left-0 font-semibold text-black px-3 sm:w-[5rem] sm:h-[1.5rem] rounded-r-md"
               style={{ backgroundColor: '#F1B646' }}
             >
               {item.year}
@@ -63,7 +58,6 @@ function MainCard({ item }) {
               >
                 Read more
               </button>
-              <a href={url}>Download PDF</a>
             </section>
           </div>
 
@@ -71,7 +65,7 @@ function MainCard({ item }) {
             <img
               src={item.images[0].fields.file.url}
               alt="main image"
-              className="w-full h-autoobject-cover shadow-md rounded-xl lg:min-w-[20rem] lg:min-h-[10rem]"
+              className="w-full h-autoobject-cover shadow-md md:rounded-xl sm:rounded-none lg:min-w-[20rem] lg:min-h-[10rem]"
             />
           </div>
         </article>
@@ -81,3 +75,6 @@ function MainCard({ item }) {
 }
 
 export default MainCard;
+
+// const url = item.pdfs && item.pdfs[0].fields.file.url;
+// <a href={url}>Download PDF</a>;
