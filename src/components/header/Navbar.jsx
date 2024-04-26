@@ -1,4 +1,4 @@
-import logo from '../../assets/ksss-logo.png';
+import logo from '../../assets/icon.svg';
 import ToggleLanguages from './ToggleLanguages';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
@@ -15,7 +15,7 @@ function Navbar() {
                   <div className="flex-shrink-0  flex items-center ">
                     {/* Logo */}
                     <img
-                      className=" h-[4em] w-auto"
+                      className=" h-[3em] w-auto"
                       src={logo}
                       alt="Workflow"
                     />

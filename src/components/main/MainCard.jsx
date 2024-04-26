@@ -1,8 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function MainCard({ item }) {
+  const [language, setLanguage] = useState(
+    localStorage.getItem('language') || 'swedish'
+  );
+
   useEffect(() => {
     AOS.init({
       offset: 200,
@@ -11,7 +15,12 @@ function MainCard({ item }) {
     });
   }, []);
 
-  const language = localStorage.getItem('language') || 'swedish';
+  useEffect(() => {
+    // Update local storage when language changes
+    localStorage.setItem('language', language);
+  }, [language]);
+
+  const readMoreText = language === 'swedish' ? 'Läs mer' : 'Read more';
 
   return (
     <>
@@ -56,7 +65,7 @@ function MainCard({ item }) {
                 className="font-bold text-sm border-none rounded-xl px-8 py-2  mb-[1rem] transform sm: active:scale-95 transition-transform duration-200"
                 style={{ backgroundColor: '#348DB3', color: '#FAFAFA' }}
               >
-                Read more
+                {readMoreText}
               </button>
             </section>
           </div>
