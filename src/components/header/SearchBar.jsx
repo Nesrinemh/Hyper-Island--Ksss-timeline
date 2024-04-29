@@ -26,7 +26,7 @@ function SearchBar() {
           <input
             id="search"
             name="search"
-            className="block w-full  pl-10 pr-3 py-2 border-none  rounded-full leading-5 bg-[#F3F3F3] placeholder-[#8F8F8F] focus:outline-none focus:placeholder-gray-400 focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="block w-full  pl-10 pr-3 py-2 border-none  rounded-full leading-5 bg-[#F3F3F3] placeholder-[#8F8F8F] focus:outline-none focus:placeholder-gray-400 sm:text-sm"
             placeholder="Search for events"
             type="search"
           />
