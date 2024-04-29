@@ -1,19 +1,18 @@
+import { useState } from 'react';
 import EventCard from '../components/main/EventCard';
 import Navbar from '../components/header/Navbar';
 import BackBar from '../components/header/BackBar';
-// import { GetSingleDataContext } from '../helpers/useSingleContext';
-// import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
 
 function EventPage() {
   const { id } = useParams();
-  // const { singleData, fetchData } = useContext(GetSingleDataContext);
+  const [data, setData] = useState(null);
 
   return (
     <div>
       <Navbar />
-      <BackBar />
-      <EventCard eventID={id} />
+      {data && <BackBar eventYear={data.fields.year} />}
+      <EventCard eventID={id} setData={setData} />
     </div>
   );
 }

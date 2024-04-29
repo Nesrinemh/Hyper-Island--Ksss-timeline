@@ -1,14 +1,14 @@
-import React from 'react';
 import { SlArrowLeft } from 'react-icons/sl';
+import { Link } from 'react-router-dom';
 
-function BackBar() {
+function BackBar({ eventYear }) {
   return (
     <>
       <div className="bg-[#358DB3] flex flex-row items-center justify-between px-5 text-white font-bold h-10">
-        <a className="text-2xl">
+        <Link to={'/'} className="text-2xl">
           <SlArrowLeft />
-        </a>
-        <p className="text-md">2021</p>
+        </Link>
+        <p className="text-md">{eventYear}</p>
       </div>
     </>
   );
