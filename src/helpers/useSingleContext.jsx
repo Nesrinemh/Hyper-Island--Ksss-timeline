@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+
 const GetSingleDataContext = createContext();
 const GetSingleDataProvider = ({ children }) => {
   const [singleData, setSingleData] = useState(null);
@@ -16,6 +17,7 @@ const GetSingleDataProvider = ({ children }) => {
       console.log(error);
     }
   };
+
   return (
     <GetSingleDataContext.Provider value={{ singleData, fetchData }}>
       {children}

@@ -2,6 +2,7 @@ import logo from '../../assets/icon.svg';
 import ToggleLanguages from './ToggleLanguages';
 import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -14,11 +15,13 @@ function Navbar() {
                 <div className="flex  px-2 lg:px-0 ">
                   <div className="flex-shrink-0  flex items-center ">
                     {/* Logo */}
-                    <img
-                      className=" h-[3em] w-auto"
-                      src={logo}
-                      alt="Workflow"
-                    />
+                    <Link to={'/'}>
+                      <img
+                        className=" h-[3em] w-auto"
+                        src={logo}
+                        alt="Workflow"
+                      />
+                    </Link>
                   </div>
 
                   <div className="flex justify-center items-center w-[20em] space-x-10 md:w-[40em] ">
@@ -76,7 +79,7 @@ function Navbar() {
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="border-transparent text-black hover:bg-gray-50 block pl-3 pr-4 py-2 border-l-4 text-xs font-normal"
+                  className="border-transparent text-black hover:bg-gray-50 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                   s
                 >
                   About us
@@ -84,14 +87,14 @@ function Navbar() {
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="border-transparent text-black hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-normal"
+                  className="border-transparent text-black hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   Log in/Sign up
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="border-transparent text-[#017AAF] hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                  className="border-transparent  hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   Be a member
                 </Disclosure.Button>
@@ -100,12 +103,12 @@ function Navbar() {
                   href="#"
                   className="border-transparent text-[#017AAF] hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
-                  Year book
+                  <Link to={'/yearbook'}>Year book</Link>
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="border-transparent text-[#017AAF] hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                  className="border-transparent  hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   Contact us
                 </Disclosure.Button>
