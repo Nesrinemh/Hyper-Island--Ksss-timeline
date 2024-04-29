@@ -12,6 +12,7 @@ function MainContent() {
       const sortedEvents = response.sort((a, b) => b.year - a.year);
       setEvent(sortedEvents);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // map to return all events
