@@ -1,16 +1,14 @@
 import useContentful from '../helpers/useContenful';
 import { createClient } from 'contentful';
 
-// Mocking the contentful module
 jest.mock('contentful', () => ({
   createClient: jest.fn(),
 }));
 
 describe('useContentful', () => {
-  const mockGetEntries = jest.fn(); // Mock function for getEntries
+  const mockGetEntries = jest.fn();
 
   beforeAll(() => {
-    // Mock createClient to return an object with getEntries method
     createClient.mockReturnValue({
       getEntries: mockGetEntries,
     });
@@ -21,7 +19,6 @@ describe('useContentful', () => {
   });
 
   it('fetches data from Contentful', async () => {
-    // Mocked entries response
     const mockEntries = {
       items: [
         {
@@ -43,21 +40,17 @@ describe('useContentful', () => {
       ],
     };
 
-    // Mock getEntries to resolve with mockEntries
     mockGetEntries.mockResolvedValueOnce(mockEntries);
 
     const { getData } = useContentful();
-
-    // Call the getData function
     const data = await getData();
-    // Assert that the client was called with the correct parameters
+
     expect(mockGetEntries).toHaveBeenCalledWith({
       content_type: 'ksssEvent',
       select: 'fields',
       order: 'fields.fullDate',
     });
 
-    // Assert that the returned data is transformed correctly
     expect(data).toEqual([
       {
         title: 'Event 1',

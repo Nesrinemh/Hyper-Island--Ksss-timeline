@@ -17,12 +17,12 @@ const useContentful = () => {
         order: 'fields.fullDate',
       });
 
-      // sanitize data
-      const sanitizedEntries = entries.items.map((item) => {
-        const eventImages = item.fields.images;
-        const eventId = item.sys.id;
+      const sanitizedEntries = entries?.items.map((item) => {
+        const fields = item?.fields; // Access the 'fields' property of each item
+        const eventImages = fields?.images; // Access the 'images' property of 'fields'
+        const eventId = item?.sys?.id;
         return {
-          ...item.fields,
+          ...fields, // Spread the 'fields' object
           eventImages,
           eventId,
         };
@@ -31,8 +31,10 @@ const useContentful = () => {
       return sanitizedEntries;
     } catch (error) {
       console.error(`Error fetching data: ${error}`);
+      return [];
     }
   };
+
   return { getData };
 };
 
