@@ -6,6 +6,7 @@ function MainContent() {
   const [event, setEvent] = useState([]);
   const { getData } = useContentful();
 
+  // get data from contentful
   useEffect(() => {
     getData().then((response) => {
       const sortedEvents = response.sort((a, b) => b.year - a.year);
@@ -13,6 +14,7 @@ function MainContent() {
     });
   }, []);
 
+  // map to return all events
   return event.map((item, index) => {
     return <MainCard key={index} item={item} />;
   });

@@ -3,6 +3,7 @@ import { createContext, useState } from 'react';
 const GetSingleDataContext = createContext();
 const GetSingleDataProvider = ({ children }) => {
   const [singleData, setSingleData] = useState(null);
+  // Fetching single article data
   const fetchData = async (id) => {
     try {
       const response = await fetch(
@@ -17,7 +18,7 @@ const GetSingleDataProvider = ({ children }) => {
       console.log(error);
     }
   };
-
+  // send all props to the children
   return (
     <GetSingleDataContext.Provider value={{ singleData, fetchData }}>
       {children}

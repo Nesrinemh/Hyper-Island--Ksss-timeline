@@ -7,7 +7,6 @@ import { useParams } from 'react-router-dom';
 function EventPage() {
   const { id } = useParams();
   const [data, setData] = useState(null);
-
   return (
     <div>
       <Navbar />

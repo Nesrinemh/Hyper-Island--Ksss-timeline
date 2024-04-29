@@ -8,6 +8,7 @@ const useContentful = () => {
     // 'cdn.contentful.com' to production
   });
 
+  // get data from contentful
   const getData = async () => {
     try {
       const entries = await client.getEntries({
@@ -16,6 +17,7 @@ const useContentful = () => {
         order: 'fields.fullDate',
       });
 
+      // sanitize data
       const sanitizedEntries = entries.items.map((item) => {
         const eventImages = item.fields.images;
         const eventId = item.sys.id;
