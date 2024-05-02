@@ -1,3 +1,15 @@
+/**
+ * This test suite tests the `useContentful` hook.
+ * The `useContentful` hook creates a Contentful client and provides a function to fetch and sanitize data from Contentful.
+ * The `createClient` function from the `contentful` library is mocked to return a client with a `getEntries` function.
+ * The `getEntries` function is mocked to return a Promise that resolves to a mock entries object.
+ * The test checks if the `getEntries` function is called with the correct parameters and if the `getData` function returns the correct data.
+ *
+ *
+ *
+ * @see {@link ../helpers/useContenful.js} for the function that this test suite tests.
+ */
+
 import useContentful from '../helpers/useContenful';
 import { createClient } from 'contentful';
 

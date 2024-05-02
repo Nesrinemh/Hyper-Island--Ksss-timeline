@@ -2,6 +2,18 @@ import MainCard from '../components/main/MainCard';
 import useContentful from '../helpers/useContenful';
 import { useEffect, useState } from 'react';
 
+/**
+ * `MainContent` is a functional component that fetches event data from Contentful and renders a `MainCard` for each event.
+ * The event data is fetched using the `useContentful` hook and sorted by year in descending order.
+ * Each `MainCard` is passed an event item as a prop.
+ *
+ *
+ * // The component can be used like this:
+ * <MainContent />
+ *
+ * @returns {React.Element[]} An array of `MainCard` elements, each representing an event.
+ */
+
 function MainContent() {
   const [event, setEvent] = useState([]);
   const { getData } = useContentful();

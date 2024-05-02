@@ -4,6 +4,17 @@ import { Disclosure } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'react-router-dom';
 
+/**
+ * `Navbar` is a functional component that renders a navigation bar.
+ * The navigation bar includes a logo, a title, a link to the KSSS website, a language toggle, and a menu button.
+ * The menu includes links to various sections of the website.
+ *
+ * // The component can be used like this:
+ * <Navbar />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function Navbar() {
   return (
     <>

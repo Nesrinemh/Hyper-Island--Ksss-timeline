@@ -1,5 +1,18 @@
 import { createClient } from 'contentful';
 
+/**
+ * `useContentful` is a hook that creates a Contentful client and provides a function to fetch and sanitize data from Contentful.
+ * The client is configured with a space ID, an access token, and a host.
+ * The `getData` function fetches data of the 'ksssEvent' content type, selects the 'fields' of each entry, and orders the entries by 'fullDate'.
+ * Each entry is sanitized into a new object that includes the entry's fields, images, and ID.
+ *
+ * // The hook can be used like this:
+ * const { getData } = useContentful();
+ * const data = await getData();
+ *
+ * @returns {Object} An object with the `getData` function.
+ */
+
 const useContentful = () => {
   const client = createClient({
     space: 'fr5410kqk9t2',

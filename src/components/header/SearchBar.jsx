@@ -1,4 +1,16 @@
 /* eslint-disable react/no-unknown-property */
+
+/**
+ * `SearchBar` is a functional component that renders a search bar.
+ * The search bar includes an input field for search queries and a button to submit the search.
+ * This functionnality doesn't work rigth now (24/5/2).
+ *
+ * // The component can be used like this:
+ * <SearchBar />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function SearchBar() {
   return (
     <div className="flex md:justify-center justify-end items-center border-[#F3F3F3] border-b-2 h-[3.3em]">

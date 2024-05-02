@@ -2,6 +2,17 @@ import useContentful from '../../helpers/useContenful';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * `YearNavigation` is a functional component that renders a navigation bar with links to different years.
+ * The years are fetched from Contentful using the `useContentful` hook.
+ * Each year is a link that navigates to a route based on the year.
+
+ * // The component can be used like this:
+ * <YearNavigation />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function YearNavigation() {
   const { getData } = useContentful();
   const [years, setYears] = useState([]);

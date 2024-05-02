@@ -1,5 +1,15 @@
 import { PiFacebookLogo, PiEnvelope, PiPhone } from 'react-icons/pi';
 
+/**
+ * `Footer` is a functional component that renders a footer with the current year, address, and contact links.
+ * The footer includes a copyright notice with the current year, the address of the organization, and links to Facebook, email, and phone.
+ * The `GetCurrentYear` function is used to get the current year for the copyright notice.
+ * // The component can be used like this:
+ * <Footer />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function Footer() {
   //-> Function to get current year for copiright:
   function GetCurrentYear() {

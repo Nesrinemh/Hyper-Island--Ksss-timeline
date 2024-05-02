@@ -2,6 +2,17 @@
 
 import { useState, useEffect } from 'react';
 
+/**
+ * `Hero` is a functional component that renders a hero section with a title and a description.
+ * The description can be in English or Swedish, based on the language stored in local storage.
+ *
+ *
+ * // The component can be used like this:
+ * <Hero />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function Hero() {
   const [language, setLanguage] = useState(
     localStorage.getItem('language') || 'english'

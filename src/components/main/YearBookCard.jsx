@@ -3,6 +3,19 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import books from '../../assets/books.png';
 
+/**
+ * `YearBookCard` is a functional component that renders a card for the KSSS Books section.
+ * The card includes a title, a subtitle, and an image.
+ * The component uses the AOS library to animate the card when it's scrolled into view.
+ *
+ * (This functionnality doesn't work rigth now (24/5/2)).
+ *
+ * // The component can be used like this:
+ * <YearBookCard />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 const YearBookCard = () => {
   useEffect(() => {
     AOS.init({

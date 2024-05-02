@@ -1,6 +1,18 @@
 import { useState } from 'react';
 import { Switch } from '@headlessui/react';
 
+/**
+ * `ToggleLanguages` is a functional component that renders a language toggle switch.
+ * The switch allows the user to toggle between English and Swedish languages.
+ * The selected language is stored in local storage.
+ *
+ *
+ * // The component can be used like this:
+ * <ToggleLanguages />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }

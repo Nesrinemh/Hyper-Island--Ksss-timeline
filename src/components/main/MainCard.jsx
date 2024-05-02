@@ -3,6 +3,31 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
 
+/**
+ * `MainCard` is a functional component that renders a main card with event details.
+ * The card includes the event year, title, summary, and a read more button.
+ * The title and summary can be in English or Swedish, based on the language stored in local storage.
+ * The card also includes media of the event. (images or pdfs).
+ * The component uses the AOS library to animate the card when it's scrolled into view.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {Object} props.item - The event data to display in the card.
+ * @param {string} props.item.year - The year of the event.
+ * @param {string} props.item.titleSwedish - The Swedish title of the event.
+ * @param {string} props.item.titleEnglish - The English title of the event.
+ * @param {string} props.item.summarySwedish - The Swedish summary of the event.
+ * @param {string} props.item.summaryEnglish - The English summary of the event.
+ * @param {string} props.item.eventId - The ID of the event.
+ * @param {Object[]} props.item.images - The images of the event.
+ * @param {Object} props.item.images[].fields - The fields of the image.
+ * @param {string} props.item.images[].fields.file.url - The URL of the image.
+ *
+ * // The component can be used like this:
+ * <MainCard item={item} />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 function MainCard({ item }) {
   const [language, setLanguage] = useState(
     localStorage.getItem('language') || 'swedish'
@@ -86,6 +111,3 @@ function MainCard({ item }) {
 }
 
 export default MainCard;
-
-// const url = item.pdfs && item.pdfs[0].fields.file.url;
-// <a href={url}>Download PDF</a>;

@@ -3,6 +3,25 @@ import { GetSingleDataContext } from '../../helpers/useSingleContext';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import image from '../../assets/fredrik.jpg';
 
+/**
+ * `EventCard` is a functional component that fetches and displays data for a single event.
+ * The event data is fetched from a context using the `useContext` hook and the `fetchData` function.
+ * The component displays a loading message while the data is being fetched.
+ * Once the data is fetched, it displays the event title, summary, images, and text.
+ * The text and title can be in English or Swedish, based on the language stored in local storage.
+ *
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.eventID - The ID of the event to fetch data for.
+ * @param {function} props.setData - The function to set the event data.
+ *
+ *
+ * // The component can be used like this:
+ * <EventCard eventID="123" setData={setData} />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
 const EventCard = ({ eventID, setData }) => {
   const { singleData, fetchData } = useContext(GetSingleDataContext);
   const [isLoading, setIsLoading] = useState(true);
