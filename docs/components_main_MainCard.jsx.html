@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/main/MainCard.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/main/MainCard.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
+
+/**
+ * `MainCard` is a functional component that renders a main card with event details.
+ * The card includes the event year, title, summary, and a read more button.
+ * The title and summary can be in English or Swedish, based on the language stored in local storage.
+ * The card also includes media of the event. (images or pdfs).
+ * The component uses the AOS library to animate the card when it's scrolled into view.
+ *
+ * @param {Object} props - The properties passed to the component.
+ * @param {Object} props.item - The event data to display in the card.
+ * @param {string} props.item.year - The year of the event.
+ * @param {string} props.item.titleSwedish - The Swedish title of the event.
+ * @param {string} props.item.titleEnglish - The English title of the event.
+ * @param {string} props.item.summarySwedish - The Swedish summary of the event.
+ * @param {string} props.item.summaryEnglish - The English summary of the event.
+ * @param {string} props.item.eventId - The ID of the event.
+ * @param {Object[]} props.item.images - The images of the event.
+ * @param {Object} props.item.images[].fields - The fields of the image.
+ * @param {string} props.item.images[].fields.file.url - The URL of the image.
+ *
+ * // The component can be used like this:
+ * &lt;MainCard item={item} />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
+function MainCard({ item }) {
+  const [language, setLanguage] = useState(
+    localStorage.getItem('language') || 'swedish'
+  );
+
+  useEffect(() => {
+    AOS.init({
+      offset: 200,
+      duration: 500,
+      easing: 'ease-in-sine',
+    });
+  }, []);
+
+  useEffect(() => {
+    // Update local storage when language changes
+    localStorage.setItem('language', language);
+  }, [language]);
+
+  const readMoreText = language === 'swedish' ? 'Läs mer' : 'Read more';
+  return (
+    &lt;>
+      &lt;div style={{ backgroundColor: '#F7F7F7' }}>
+        &lt;article
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-[3rem] "
+          {...(window.innerWidth &lt;= 640 &amp;&amp;
+            item > 1 &amp;&amp; {
+              'data-aos': 'fade-up',
+              'data-aos-offset': '300',
+              'data-aos-easing': 'ease-in-sine',
+              'data-aos-duration': '400',
+            })}
+          {...(window.innerWidth >= 640 &amp;&amp;
+            item > 0 &amp;&amp; {
+              'data-aos': 'fade-up',
+              'data-aos-offset': '300',
+              'data-aos-easing': 'ease-in-sine',
+              'data-aos-duration': '400',
+            })}
+        >
+          &lt;div className="flex flex-row justify-start items-start ml-0">
+            &lt;div
+              className="sticky left-0 font-semibold text-black px-3 sm:w-[5rem] sm:h-[1.5rem] rounded-r-md"
+              style={{ backgroundColor: '#F1B646' }}
+            >
+              {item.year}
+            &lt;/div>
+            &lt;section className="flex flex-col w-full justify-start items-start px-[3rem]">
+              &lt;h1 className="font-bold sm:text-xl md:text-2xl lg:text-3xl">
+                {language === 'swedish' ? item.titleSwedish : item.titleEnglish}
+              &lt;/h1>
+              &lt;p className="sm:text-sm py-5 md:text-lg">
+                {language === 'swedish'
+                  ? item.summarySwedish
+                  : item.summaryEnglish}
+              &lt;/p>
+              &lt;Link to={`event/${item.eventId}`}>
+                &lt;button
+                  href="https://example.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-sm border-none rounded-xl px-8 py-2  mb-[1rem] transform sm: active:scale-95 transition-transform duration-200"
+                  style={{ backgroundColor: '#348DB3', color: '#FAFAFA' }}
+                >
+                  {readMoreText}
+                &lt;/button>
+              &lt;/Link>
+            &lt;/section>
+          &lt;/div>
+
+          &lt;div className="flex flex-col sm:w-full md:max-w-[25rem] lg:max-w-[35rem]">
+            &lt;img
+              src={item.images[0].fields.file.url}
+              alt="main image"
+              className="w-full h-autoobject-cover shadow-md md:rounded-xl sm:rounded-none lg:min-w-[20rem] lg:min-h-[10rem]"
+            />
+          &lt;/div>
+        &lt;/article>
+      &lt;/div>
+    &lt;/>
+  );
+}
+
+export default MainCard;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BackBar">BackBar</a></li><li><a href="global.html#EventCard">EventCard</a></li><li><a href="global.html#EventPage">EventPage</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GetSingleDataContext">GetSingleDataContext</a></li><li><a href="global.html#GetSingleDataProvider">GetSingleDataProvider</a></li><li><a href="global.html#Hero">Hero</a></li><li><a href="global.html#MainCard">MainCard</a></li><li><a href="global.html#MainContent">MainContent</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#SearchBar">SearchBar</a></li><li><a href="global.html#YearBookCard">YearBookCard</a></li><li><a href="global.html#YearNavigation">YearNavigation</a></li><li><a href="global.html#classNames">classNames</a></li><li><a href="global.html#useContentful">useContentful</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Thu May 02 2024 11:04:51 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

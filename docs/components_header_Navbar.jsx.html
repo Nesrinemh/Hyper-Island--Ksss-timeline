@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/header/Navbar.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/header/Navbar.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import logo from '../../assets/icon.svg';
+import ToggleLanguages from './ToggleLanguages';
+import { Disclosure } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Link } from 'react-router-dom';
+
+/**
+ * `Navbar` is a functional component that renders a navigation bar.
+ * The navigation bar includes a logo, a title, a link to the KSSS website, a language toggle, and a menu button.
+ * The menu includes links to various sections of the website.
+ *
+ * // The component can be used like this:
+ * &lt;Navbar />
+ *
+ * @returns {React.Element} The rendered React element.
+ */
+
+function Navbar() {
+  return (
+    &lt;>
+      &lt;Disclosure as="nav" className="bg-white shadow ">
+        {({ open }) => (
+          &lt;>
+            &lt;div className="mx-auto px-2 sm:px-4 lg:px-8">
+              &lt;div className="flex justify-between h-16">
+                &lt;div className="flex-shrink-0 flex items-center ">
+                  {/* Logo */}
+                  &lt;Link to={'/'}>
+                    &lt;img
+                      className=" h-[3em] w-auto"
+                      src={logo}
+                      alt="Workflow"
+                    />
+                  &lt;/Link>
+                &lt;/div>
+
+                &lt;div className="flex justify-center items-center ">
+                  {/* Title */}
+
+                  &lt;h2 className=" ml-4 text-[#017AAF] font-bold pr-6">
+                    History
+                  &lt;/h2>
+                  {/* Ksss Website link */}
+                  &lt;a
+                    href="https://www.ksss.se/"
+                    target="_blank"
+                    className=" font-bold flex ml-4 text-sm p-0"
+                  >
+                    &lt;span className="border-b border-black">KSSS&lt;/span>
+                    &lt;svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="1.5"
+                      stroke="currentColor"
+                      className="w-4 h-6"
+                    >
+                      &lt;path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+                      />
+                    &lt;/svg>
+                  &lt;/a>
+                  &lt;div className="inline-flex items-center ml-4 pl-6">
+                    {/* Toggle lang */}
+                    &lt;ToggleLanguages />
+                  &lt;/div>
+                &lt;/div>
+
+                &lt;div className="flex items-center justify-evenly">
+                  {/* Mobile menu button */}
+
+                  &lt;Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#017AAF] ">
+                    &lt;span className="sr-only">Open main menu&lt;/span>
+                    {open ? (
+                      &lt;XIcon className="block h-6 w-6" aria-hidden="true" />
+                    ) : (
+                      &lt;MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    )}
+                  &lt;/Disclosure.Button>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;Disclosure.Panel className="w-40 absolute right-0 bg-white z-50 ">
+              &lt;div className="pt-2 pb-3 space-y-1 backdrop-blur-lg">
+                &lt;Disclosure.Button
+                  href="#"
+                  className="border-transparent text-black hover:bg-gray-50 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                >
+                  About us
+                &lt;/Disclosure.Button>
+                &lt;Disclosure.Button
+                  href="#"
+                  className="border-transparent text-black hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                >
+                  Log in/Sign up
+                &lt;/Disclosure.Button>
+                &lt;Disclosure.Button
+                  href="#"
+                  className="border-transparent  hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                >
+                  Be a member
+                &lt;/Disclosure.Button>
+                &lt;Disclosure.Button
+                  href="#"
+                  className="border-transparent text-[#017AAF] hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                >
+                  &lt;Link to={'/yearbook'}>Year book&lt;/Link>
+                &lt;/Disclosure.Button>
+                &lt;Disclosure.Button
+                  href="#"
+                  className="border-transparent  hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                >
+                  Contact us
+                &lt;/Disclosure.Button>
+              &lt;/div>
+            &lt;/Disclosure.Panel>
+          &lt;/>
+        )}
+      &lt;/Disclosure>
+    &lt;/>
+  );
+}
+
+export default Navbar;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BackBar">BackBar</a></li><li><a href="global.html#EventCard">EventCard</a></li><li><a href="global.html#EventPage">EventPage</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GetSingleDataContext">GetSingleDataContext</a></li><li><a href="global.html#GetSingleDataProvider">GetSingleDataProvider</a></li><li><a href="global.html#Hero">Hero</a></li><li><a href="global.html#MainCard">MainCard</a></li><li><a href="global.html#MainContent">MainContent</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#SearchBar">SearchBar</a></li><li><a href="global.html#YearBookCard">YearBookCard</a></li><li><a href="global.html#YearNavigation">YearNavigation</a></li><li><a href="global.html#classNames">classNames</a></li><li><a href="global.html#useContentful">useContentful</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Thu May 02 2024 11:04:51 GMT+0200 (Central European Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
