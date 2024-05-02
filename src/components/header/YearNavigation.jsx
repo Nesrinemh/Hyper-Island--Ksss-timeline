@@ -25,11 +25,11 @@ function YearNavigation() {
   }, []);
 
   return (
-    <div className="max-w-full overflow-x-auto bg-white">
+    <div className="max-w-full overflow-x-auto bg-custom-white">
       <div className="inline-flex justify-between items-center py-[1em] px-[1.5em]">
         {years.map((item, index) => (
           <Link key={index} to={`/year/${item.year}`}>
-            <button className=" w-20 py-[0.3em] px-[1em] my-0 mx-4 border-solid border-2 border-slate-200 rounded-3xl hover:bg-[#348DB3] hover:text-white">
+            <button className=" w-20 px-[1rem] mx-4 border-solid border-2 border-custom-lighGrey rounded-3xl hover:bg-custom-blue hover:text-custom-white">
               {item.year}
             </button>
           </Link>

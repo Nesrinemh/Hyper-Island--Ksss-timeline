@@ -18,7 +18,7 @@ function Footer() {
   }
 
   return (
-    <footer className="flex flex-col items-center justify-center bg-[#348DB3] text-white py-6 mt-auto">
+    <footer className="flex flex-col items-center justify-center bg-custom-blue text-custom-white py-6 mt-auto">
       <strong>Adress:</strong>
       <p className="text-center">Hotellvägen 9, 133 35 Saltsjöbaden</p>
       <nav>

@@ -2,7 +2,17 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'custom-blue': '#348DB3',
+        'custom-white': '#FAFAFA',
+        'custom-lightGrey': '#F7F7F7',
+        'custom-darkGrey': '#9CA3AF',
+        'custom-lightBlack': '#6E6B6B',
+        'custom-black': '#000000',
+        'custom-yellow': '#F1B646',
+      },
+    },
   },
   screens: {
     xs: '480px',

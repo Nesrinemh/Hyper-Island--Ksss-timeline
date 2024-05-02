@@ -2,14 +2,16 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 /**
  * `MainCard` is a functional component that renders a main card with event details.
  * The card includes the event year, title, summary, and a read more button.
  * The title and summary can be in English or Swedish, based on the language stored in local storage.
- * The card also includes media of the event. (images or pdfs).
+ * The card also includes an image of the event.
  * The component uses the AOS library to animate the card when it's scrolled into view.
  *
+ * @component
  * @param {Object} props - The properties passed to the component.
  * @param {Object} props.item - The event data to display in the card.
  * @param {string} props.item.year - The year of the event.
@@ -21,6 +23,7 @@ import { Link } from 'react-router-dom';
  * @param {Object[]} props.item.images - The images of the event.
  * @param {Object} props.item.images[].fields - The fields of the image.
  * @param {string} props.item.images[].fields.file.url - The URL of the image.
+ *
  *
  * // The component can be used like this:
  * <MainCard item={item} />
@@ -49,7 +52,7 @@ function MainCard({ item }) {
   const readMoreText = language === 'swedish' ? 'Läs mer' : 'Read more';
   return (
     <>
-      <div style={{ backgroundColor: '#F7F7F7' }}>
+      <div className="bg-custom-grey">
         <article
           className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-[3rem] "
           {...(window.innerWidth <= 640 &&
@@ -68,10 +71,7 @@ function MainCard({ item }) {
             })}
         >
           <div className="flex flex-row justify-start items-start ml-0">
-            <div
-              className="sticky left-0 font-semibold text-black px-3 sm:w-[5rem] sm:h-[1.5rem] rounded-r-md"
-              style={{ backgroundColor: '#F1B646' }}
-            >
+            <div className="sticky left-0 bg-custom-yellow font-semibold text-cutom-black px-3 sm:w-[5rem] sm:h-[1.5rem] rounded-r-md">
               {item.year}
             </div>
             <section className="flex flex-col w-full justify-start items-start px-[3rem]">
@@ -84,15 +84,7 @@ function MainCard({ item }) {
                   : item.summaryEnglish}
               </p>
               <Link to={`event/${item.eventId}`}>
-                <button
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-sm border-none rounded-xl px-8 py-2  mb-[1rem] transform sm: active:scale-95 transition-transform duration-200"
-                  style={{ backgroundColor: '#348DB3', color: '#FAFAFA' }}
-                >
-                  {readMoreText}
-                </button>
+                <Button text={readMoreText} />
               </Link>
             </section>
           </div>

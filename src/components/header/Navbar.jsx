@@ -71,7 +71,10 @@ function Navbar() {
                 <div className="flex items-center justify-evenly">
                   {/* Mobile menu button */}
 
-                  <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#017AAF] ">
+                  <Disclosure.Button
+                    className="inline-flex items-center justify-center p-2 rounded-md text-custom-darkGrey hover:text-custom-lightBlack
+                hover:bg-lighGrey focus:outline-none focus:ring-2 focus:ring-inset focus:ring-custom-blue "
+                  >
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -83,17 +86,17 @@ function Navbar() {
               </div>
             </div>
 
-            <Disclosure.Panel className="w-40 absolute right-0 bg-white z-50 ">
+            <Disclosure.Panel className="w-40 absolute right-0 bg-custom-white z-50 shadow-lg ">
               <div className="pt-2 pb-3 space-y-1 backdrop-blur-lg">
                 <Disclosure.Button
                   href="#"
-                  className="border-transparent text-black hover:bg-gray-50 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                  className="border-transparent text-custom-black hover:bg-custom-lightGrey block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   About us
                 </Disclosure.Button>
                 <Disclosure.Button
                   href="#"
-                  className="border-transparent text-black hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                  className="border-transparent text-custom-black hover:bg-custom-lightGrey block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   Log in/Sign up
                 </Disclosure.Button>
@@ -105,13 +108,13 @@ function Navbar() {
                 </Disclosure.Button>
                 <Disclosure.Button
                   href="#"
-                  className="border-transparent text-[#017AAF] hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                  className="border-transparent text-custom-blue hover:bg-custom-lightGrey block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   <Link to={'/yearbook'}>Year book</Link>
                 </Disclosure.Button>
                 <Disclosure.Button
                   href="#"
-                  className="border-transparent  hover:bg-gray-5 block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
+                  className="border-transparent text-custom-black hover:bg-custom-lightGrey block pl-3 pr-4 py-2 border-l-4 text-xs font-medium"
                 >
                   Contact us
                 </Disclosure.Button>

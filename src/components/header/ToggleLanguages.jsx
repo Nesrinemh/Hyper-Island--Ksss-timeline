@@ -34,7 +34,7 @@ export default function ToggleLanguages() {
       checked={!enabled}
       onChange={toggleLanguage}
       className={classNames(
-        !enabled ? 'bg-[#017AAF]' : 'bg-gray-200',
+        !enabled ? 'bg-custom-blue' : 'bg-custom-lightGrey',
         'flex items-center  flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#017AAF]'
       )}
     >
@@ -54,7 +54,7 @@ export default function ToggleLanguages() {
           )}
           aria-hidden="true"
         >
-          <p className="font-bold text-xs text-[#017AAF] ">SE</p>
+          <p className="font-bold text-xs text-custom-blue ">SE</p>
         </span>
         <span
           className={classNames(
@@ -65,7 +65,7 @@ export default function ToggleLanguages() {
           )}
           aria-hidden="true"
         >
-          <p className="font-bold text-xs text-[#017AAF] ">EN</p>
+          <p className="font-bold text-xs text-custom-blue ">EN</p>
         </span>
       </span>
     </Switch>

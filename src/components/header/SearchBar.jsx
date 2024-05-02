@@ -13,7 +13,7 @@
 
 function SearchBar() {
   return (
-    <div className="flex md:justify-center justify-end items-center border-[#F3F3F3] border-b-2 h-[3.3em]">
+    <div className="flex md:justify-center justify-end items-center border-custom-white border-b-2 h-[3.3em]">
       <div className="max-w-lg w-[18.9em] md:w-[128.9em]   overflow-hidden">
         <label htmlFor="search" className="sr-only">
           Search
@@ -38,7 +38,7 @@ function SearchBar() {
           <input
             id="search"
             name="search"
-            className="block w-full  pl-10 pr-3 py-2 border-none  rounded-full leading-5 bg-[#F3F3F3] placeholder-[#8F8F8F] focus:outline-none focus:placeholder-gray-400 sm:text-sm"
+            className="block w-full  pl-10 pr-3 py-2 border-none  rounded-full leading-5 bg-custom-white placeholder-custom-darkGrey focus:outline-none focus:placeholder-custom-darkGrey sm:text-sm"
             placeholder="Search for events"
             type="search"
           />

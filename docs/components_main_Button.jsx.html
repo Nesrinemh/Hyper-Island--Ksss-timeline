@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: components/main/YearBookCard.jsx</title>
+    <title>JSDoc: Source: components/main/Button.jsx</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: components/main/YearBookCard.jsx</h1>
+    <h1 class="page-title">Source: components/main/Button.jsx</h1>
 
     
 
@@ -26,52 +26,34 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import books from '../../assets/books.png';
-
-/**
- * `YearBookCard` is a functional component that renders a card for the KSSS Books section.
- * The card includes a title, a subtitle, and an image.
- * The component uses the AOS library to animate the card when it's scrolled into view.
+            <pre class="prettyprint source linenums"><code>/**
+ * `Button` is a functional component that renders a button with custom text.
  *
- * (This functionnality doesn't work rigth now (24/5/2)).
+ * @component
+ * @param {Object} props - The properties passed to the component.
+ * @param {string} props.text - The text to display on the button.
+ *
  *
  * // The component can be used like this:
- * &lt;YearBookCard />
+ * &lt;Button text="Click me" />
  *
  * @returns {React.Element} The rendered React element.
  */
 
-const YearBookCard = () => {
-  useEffect(() => {
-    AOS.init({
-      offset: 200,
-      duration: 500,
-      easing: 'ease-in-sine',
-    });
-  }, []);
-
+function Button({ text }) {
   return (
-    &lt;div>
-      &lt;article
-        className="h-40 my-10 mx-8 bg-cover border-none rounded-xl "
-        data-aos="fade-zoom-in"
-        data-aos-offset="100"
-        data-aos-easing="ease-in-sine"
-        data-aos-duration="400"
-      >
-        &lt;h1>KSSS Books&lt;/h1>
-        &lt;h2>Under developing&lt;/h2>
-
-        &lt;img src={books} alt="book" className=" w-[20rem]" />
-      &lt;/article>
-    &lt;/div>
+    &lt;button
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-custom-blue text-custom-white font-bold text-sm border-none rounded-xl px-8 py-2 shadow-md mb-[1rem] hover:bg-custom-white hover:text-custom-blue hover:border-2 hover:border-solid hover:border-custom-blue  transform sm: active:scale-95 transition-transform duration-200"
+    >
+      {text}
+    &lt;/button>
   );
-};
+}
 
-export default YearBookCard;
+export default Button;
 </code></pre>
         </article>
     </section>

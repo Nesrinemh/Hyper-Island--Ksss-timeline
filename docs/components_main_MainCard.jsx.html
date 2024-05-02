@@ -30,14 +30,16 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 /**
  * `MainCard` is a functional component that renders a main card with event details.
  * The card includes the event year, title, summary, and a read more button.
  * The title and summary can be in English or Swedish, based on the language stored in local storage.
- * The card also includes media of the event. (images or pdfs).
+ * The card also includes an image of the event.
  * The component uses the AOS library to animate the card when it's scrolled into view.
  *
+ * @component
  * @param {Object} props - The properties passed to the component.
  * @param {Object} props.item - The event data to display in the card.
  * @param {string} props.item.year - The year of the event.
@@ -49,6 +51,7 @@ import { Link } from 'react-router-dom';
  * @param {Object[]} props.item.images - The images of the event.
  * @param {Object} props.item.images[].fields - The fields of the image.
  * @param {string} props.item.images[].fields.file.url - The URL of the image.
+ *
  *
  * // The component can be used like this:
  * &lt;MainCard item={item} />
@@ -77,7 +80,7 @@ function MainCard({ item }) {
   const readMoreText = language === 'swedish' ? 'Läs mer' : 'Read more';
   return (
     &lt;>
-      &lt;div style={{ backgroundColor: '#F7F7F7' }}>
+      &lt;div className="bg-custom-grey">
         &lt;article
           className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full py-[3rem] "
           {...(window.innerWidth &lt;= 640 &amp;&amp;
@@ -96,10 +99,7 @@ function MainCard({ item }) {
             })}
         >
           &lt;div className="flex flex-row justify-start items-start ml-0">
-            &lt;div
-              className="sticky left-0 font-semibold text-black px-3 sm:w-[5rem] sm:h-[1.5rem] rounded-r-md"
-              style={{ backgroundColor: '#F1B646' }}
-            >
+            &lt;div className="sticky left-0 bg-custom-yellow font-semibold text-cutom-black px-3 sm:w-[5rem] sm:h-[1.5rem] rounded-r-md">
               {item.year}
             &lt;/div>
             &lt;section className="flex flex-col w-full justify-start items-start px-[3rem]">
@@ -112,15 +112,7 @@ function MainCard({ item }) {
                   : item.summaryEnglish}
               &lt;/p>
               &lt;Link to={`event/${item.eventId}`}>
-                &lt;button
-                  href="https://example.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-sm border-none rounded-xl px-8 py-2  mb-[1rem] transform sm: active:scale-95 transition-transform duration-200"
-                  style={{ backgroundColor: '#348DB3', color: '#FAFAFA' }}
-                >
-                  {readMoreText}
-                &lt;/button>
+                &lt;Button text={readMoreText} />
               &lt;/Link>
             &lt;/section>
           &lt;/div>
@@ -149,13 +141,13 @@ export default MainCard;
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BackBar">BackBar</a></li><li><a href="global.html#EventCard">EventCard</a></li><li><a href="global.html#EventPage">EventPage</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GetSingleDataContext">GetSingleDataContext</a></li><li><a href="global.html#GetSingleDataProvider">GetSingleDataProvider</a></li><li><a href="global.html#Hero">Hero</a></li><li><a href="global.html#MainCard">MainCard</a></li><li><a href="global.html#MainContent">MainContent</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#SearchBar">SearchBar</a></li><li><a href="global.html#YearBookCard">YearBookCard</a></li><li><a href="global.html#YearNavigation">YearNavigation</a></li><li><a href="global.html#classNames">classNames</a></li><li><a href="global.html#useContentful">useContentful</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#BackBar">BackBar</a></li><li><a href="global.html#Button">Button</a></li><li><a href="global.html#EventCard">EventCard</a></li><li><a href="global.html#EventPage">EventPage</a></li><li><a href="global.html#Footer">Footer</a></li><li><a href="global.html#GetSingleDataContext">GetSingleDataContext</a></li><li><a href="global.html#GetSingleDataProvider">GetSingleDataProvider</a></li><li><a href="global.html#Hero">Hero</a></li><li><a href="global.html#MainCard">MainCard</a></li><li><a href="global.html#MainContent">MainContent</a></li><li><a href="global.html#Navbar">Navbar</a></li><li><a href="global.html#SearchBar">SearchBar</a></li><li><a href="global.html#YearBookCard">YearBookCard</a></li><li><a href="global.html#YearNavigation">YearNavigation</a></li><li><a href="global.html#classNames">classNames</a></li><li><a href="global.html#useContentful">useContentful</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Thu May 02 2024 11:04:51 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Thu May 02 2024 14:45:28 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>

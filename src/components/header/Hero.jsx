@@ -31,7 +31,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="px-16 flex flex-col justify-center border-[#F3F3F3] border-b-2 pb-4">
+    <div className="px-16 flex flex-col justify-center border-custom-white border-b-2 pb-4">
       <h1 className="py-4 text-2xl font-semibold">Ksss History</h1>
       <p className="text-sm text-gray-900">{textContent[language]}</p>
     </div>
