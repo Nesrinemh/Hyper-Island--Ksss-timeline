@@ -1,9 +1,3 @@
-import { useEffect, useState } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
-import Button from './Button';
-
 /**
  * `MainCard` is a functional component that renders a main card with event details.
  * The card includes the event year, title, summary, and a read more button.
@@ -11,7 +5,6 @@ import Button from './Button';
  * The card also includes an image of the event.
  * The component uses the AOS library to animate the card when it's scrolled into view.
  *
- * @component
  * @param {Object} props - The properties passed to the component.
  * @param {Object} props.item - The event data to display in the card.
  * @param {string} props.item.year - The year of the event.
@@ -25,11 +18,18 @@ import Button from './Button';
  * @param {string} props.item.images[].fields.file.url - The URL of the image.
  *
  *
+ *
  * // The component can be used like this:
  * <MainCard item={item} />
  *
  * @returns {React.Element} The rendered React element.
  */
+
+import { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
+import Button from './Button';
 
 function MainCard({ item }) {
   const [language, setLanguage] = useState(
