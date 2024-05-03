@@ -12,9 +12,10 @@
  * @returns {React.Element} The rendered React element.
  */
 
-function Button({ text }) {
+function Button({ text, onClick }) {
   return (
     <button
+      onClick={onClick}
       href="#"
       target="_blank"
       rel="noopener noreferrer"

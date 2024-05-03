@@ -84,7 +84,10 @@ function MainCard({ item }) {
                   : item.summaryEnglish}
               </p>
               <Link to={`event/${item.eventId}`}>
-                <Button text={readMoreText} />
+                <Button
+                  text={readMoreText}
+                  onClick={() => console.log('Button clicked')}
+                />
               </Link>
             </section>
           </div>
